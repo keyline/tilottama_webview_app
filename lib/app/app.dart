@@ -4,8 +4,8 @@ import '../core/app_constants.dart';
 import '../features/update/mandatory_update_gate.dart';
 import '../features/webview/client_portal_screen.dart';
 
-class TilottomaaApp extends StatelessWidget {
-  const TilottomaaApp({super.key});
+class TilottamaaApp extends StatelessWidget {
+  const TilottamaaApp({super.key});
 
   @override
   Widget build(BuildContext context) {

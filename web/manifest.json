@@ -1,6 +1,6 @@
 {
-    "name": "tilottoma_webapp",
-    "short_name": "tilottoma_webapp",
+    "name": "Tilottamaa Hair and Skin",
+    "short_name": "Tilottamaa",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

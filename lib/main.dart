@@ -7,5 +7,5 @@ import 'core/app_constants.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(AppConstants.systemUiOverlayStyle);
-  runApp(const TilottomaaApp());
+  runApp(const TilottamaaApp());
 }

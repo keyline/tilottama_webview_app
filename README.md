@@ -1,6 +1,6 @@
-# Tilottomaa Hair & Skin
+# Tilottamaa Hair and Skin
 
-A production-oriented Flutter application that displays the Tilottomaa Hair &
+A production-oriented Flutter application that displays the Tilottamaa Hair and
 Skin client portal in a native mobile WebView.
 
 ## Client portal
@@ -134,11 +134,21 @@ flutter build ipa --release
 
 ### Android signing
 
-The current Android release configuration uses the debug signing key so local
-release builds can run. Do not publish that build. Before publishing, create an
-upload keystore and replace the debug signing configuration in
-`android/app/build.gradle.kts` with a private release signing configuration.
-Never commit the keystore or its passwords.
+Android release builds use the private upload-key settings from
+`android/key.properties`. The keystore, `key.properties`, and their common file
+extensions are excluded from Git. Keep secure backups of the upload keystore and
+its credentials; never commit or share them.
+
+Build the Play Store bundle with:
+
+```shell
+flutter build appbundle --release
+```
+
+The generated upload artifact is
+`build/app/outputs/bundle/release/app-release.aab`. Because R8 minification is
+enabled, retain `build/app/outputs/mapping/release/mapping.txt` for each release
+and upload it to Play Console for readable crash and ANR stack traces.
 
 ### iOS signing
 
